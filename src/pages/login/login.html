@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding>
+  <ion-list no-lines>
+    <ion-item>
+      <ion-label stacked class="first-label">Email / Phone Number</ion-label>
+      <ion-input type="email" [(ngModel)]="loginData.emailphone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="loginData.password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button block ion-button (click)="login()" [disabled]="!loginData.emailphone || !loginData.password" class="btn btn-blue">Login</button>  
+</ion-content>

@@ -1,0 +1,275 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+// @import url('https://fonts.googleapis.com/css?family=Faustina');
+
+@font-face {
+  font-family: "nameFont";
+  src: url('../assets/fonts/Theinhardt-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: "bodyFont";
+  src: url('../assets/fonts/Theinhardt-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "headFont";
+  src: url('../assets/fonts/DINNextSlabPro-Bold.ttf') format('truetype');
+}
+
+//Global css
+ion-app {
+  .toolbar-content-md {
+    display: flex;
+  }
+  .toolbar-title-md {
+    font-size: 16px !important;
+  }
+  ion-navbar {
+    font-family: "headFont" !important;
+    font-size: 16px;
+  }
+  .toolbar-background-md {
+    border-color: none !important;
+    background: #fff;
+  }
+  .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    background-image: none;
+  }
+  ion-navbar {
+    padding: none;
+    min-height: 56px;
+    box-shadow: 0px 2px 30px #f0f0f0;
+    -webkit-box-shadow: 0px 2px 30px #f0f0f0;
+  }
+  .scroll-content {
+    padding: 20px !important;
+  }
+  ion-title {
+    text-align: center;
+  }
+  ion-label {
+    color: #252b3b !important;
+    margin: 10px 0 !important;
+    font-size: 14px;
+  }
+  ion-input {
+    input {
+      border: 1px solid #d8dbe2 !important;
+      border-radius: 4px !important;
+      padding: 10px 10px !important;
+      width: 100% !important;
+      margin: 0 !important;
+    }
+  }
+  ion-input input:focus {
+    border-color: $focus !important;
+  }
+  ion-item {
+    padding: 0 !important;
+  }
+  button {
+    font-family: "bodyFont";
+    font-weight: bold !important;
+  }
+
+  .item-inner {
+    border: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+  .btn {
+    height: 45px;
+  }
+  button.back-button {
+    padding: 0;
+    margin: 0;
+    min-width: 30px;
+    width: 30px;
+  }
+  ion-navbar button {
+    margin-right: 7px;
+    background: transparent;
+    float: right;
+    ion-icon::before, ion-icon {
+      font-size: 25px !important;
+    }
+  }
+  .avatar {
+    border-radius: 50%;
+    // border: solid 1px #939aab;
+    box-shadow: 0px 2px 30px #e8e8e8;
+    -webkit-box-shadow: 0px 2px 30px #e8e8e8;
+    width: 35px;
+    height: 35px;
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    font-weight: bold;
+  }
+  .list-md .item-input:last-child {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  button[disabled] {
+    background-color: #d0d0d0 !important;
+    box-shadow: none !important;
+  }
+  .button-md-secondary, .btn-green {
+    box-shadow: 0 2px 30px #87db9d !important;
+    -webkit-box-shadow: 0 2px 30px #87db9d !important;
+  }
+  .button-md-primary, .btn-blue {
+    box-shadow: 0 2px 30px #005aff !important;
+    -webkit-box-shadow: 0 2px 30px #005aff !important;
+  }
+  input[disabled] {
+    background: #d0d0d0 !important;
+  }
+  ion-loading {
+    div {
+      width: 100% !important;
+      height: 100% !important;
+      max-width: 100% !important;
+      max-height: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .loading {
+      background: linear-gradient(135deg, #86d59b, #7fd8c6) !important;
+      display: inline-block;
+      h4 {
+        text-align: center;
+        color: #ffffff;
+        align-items: center;
+        font-family: "headFont";
+        margin-top: 45vh !important;
+      }
+    }
+  }
+}
+
+//Menu css
+.menu-inner {
+  width: 100%;
+  background: #1f2038;
+  .toolbar-background-md, .toolbar-md, .menu-inner .list-md {
+    background: #1f2038;
+  }
+  .toolbar-title-md {
+    color: #ffffff;
+  }
+  .toolbar-md {
+    box-shadow: none;
+    padding-top: 15px;
+    padding-right: 15px;
+  }
+  ion-list {
+    border-color: #1f2038;
+    background-color: #1f2038 !important;
+  }
+  button {
+    background: transparent;
+    margin: 0 !important;
+    font-weight: normal !important;
+  }
+  ion-icon, ion-icon:before, ion-icon::before {
+    font-size: 26px !important;
+    display: block;
+    color: #FFFFFF;
+  }
+  .btn-close {
+    margin: 15px 20px 15px 15px !important;
+  }
+  .btn {
+    background-color: #1f2038 !important;
+    color: #ffffff !important;
+    padding: 0px 20px !important;
+    min-height: 20px !important;
+    height: 30px !important;
+  }
+  .btn.isDepartmentSelected {
+    border-left: 7px solid #005aff !important;
+    padding-left: 13px !important;
+  }
+  .scroll-content {
+    padding: 0 !important;
+    background-color: #1f2038 !important;
+  }
+  ion-label {
+    color: #939aab !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+  }
+  .btn.isDepartmentNew ion-label, .btn.isDirectNew ion-label {
+    color: #ffffff !important;
+    font-weight: bold;
+  }
+  .btn.isPatientNew ion-label {
+    color: #87da9c !important;
+    font-weight: bold;
+  }
+  h4 {
+    color: #e8edf7 !important;
+    padding: 5px 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    background: #1f2038;
+    border: 0;
+  }
+  .direct-point {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #504e5e;
+    margin-top: 3px;
+    margin-right: 7px;
+    float: left;
+  }
+  .btn.isDirectLogin .direct-point {
+    background: #87da9c;
+  }
+  .facility_usr {
+    display: flex;
+    padding: 0 20px;
+    .avatar_drk {
+      box-shadow: 0px 1px 30px 0px #13161f;
+      border-radius: 50%;
+    }
+    .usr_f {
+      color: #e8edf7 !important;
+      margin: 14px 0px 0px 16px;
+      font-weight: bold;
+      font-size: 16px;
+      font-family: "headFont";
+      display: inline-block;
+    }
+    .avatar {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      box-shadow: none !important;
+    }
+  }
+  .no-notice {
+    color: #474969;
+    padding-left: 20px;
+  }
+}

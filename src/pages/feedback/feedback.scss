@@ -1,0 +1,42 @@
+page-feedback {
+  .scroll-content {
+    margin-bottom: 112px !important;
+  }
+  p {
+    white-space: normal !important;
+    span {
+      float: right;
+      font-size: 12px;
+      color: #9aa1b0;
+    }
+  }
+  ion-item:first-child {
+    ion-label {
+      margin-top: 0 !important;
+    }
+  }
+  ion-footer {
+    border-top: 1px solid #cccccc;
+    margin-bottom: 20px;
+    ion-input {
+      border: 0 !important;
+      padding: 0 !important;
+      input {
+        padding: 20px 20px !important;
+        margin: 0 !important;
+        border: 0 !important;
+      }
+    }
+  }
+  .option {
+    background: transparent;
+    opacity: 0;
+  } 
+  .btn-send {
+    float: right;
+    border-radius: 4px;
+    padding: 4px 14px;
+    margin: 0 20px;
+    font-size: 12px;
+  }
+}

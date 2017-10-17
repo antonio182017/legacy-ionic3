@@ -1,0 +1,22 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Message Read By</ion-title>
+    <button (click)="closeModal()" class="btn-close-modal">
+      <ion-icon name="close" ios="md-close"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngFor="let u of readers" no-lines>
+    <ion-item *ngIf="u.name !== ''">
+      <!-- <img [src]="u.photoUrl" width="35" height="35"> -->
+      <div class="avatar" [style.backgroundColor]="colors[u.name.length % 2]">{{u.name.substring(0,1).toUpperCase()}}</div>
+      <div>
+        <p class="name">{{u.name}}</p>
+        <p class="time">Read Message {{u.displayTime}}</p>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

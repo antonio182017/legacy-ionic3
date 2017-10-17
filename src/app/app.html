@@ -1,0 +1,47 @@
+<ion-menu [content]="content">
+  <ion-content>
+    <button class="btn-close" menuToggle>
+      <ion-icon name="close" ios="md-close"></ion-icon>
+    </button>
+    <div class="facility_usr">
+      <div class="avatar" [style.backgroundColor]="colors[username.length % 4]">{{username.substring(0,1).toUpperCase()}}</div>
+      <!-- <img class="avatar_drk" [src]="photoUrl" width="50" height="50"> -->
+      <div class="usr_f">{{facility}}</div>
+    </div>
+    <h4 *ngIf="userType == 'facility'">Departments</h4>
+    <ion-list *ngIf="userType == 'facility'" no-lines>
+      <button *ngFor="let p of departments" menuClose ion-item (click)="openPage(p)" [class.isDepartmentSelected]="p.selected" [class.isDepartmentNew]="p.new" class="btn" detail-none>
+        {{p.title}}
+      </button>
+    </ion-list>
+    <h4>Patients</h4>
+    <ion-list no-lines>
+      <button *ngFor="let p of patients" menuClose ion-item (click)="openPage(p)" [class.isPatientNew]="p.new" class="btn" detail-none>
+        {{p.title}}
+      </button>
+    </ion-list>
+    <p *ngIf="userType == 'facility' && patients.length == 0" class="no-notice">No patients added</p>
+    <h4 *ngIf="userType == 'facility'">Direct Messages</h4>
+    <ion-list *ngIf="directs.length != 0" no-lines>
+      <button *ngFor="let d of directs;let i = index" menuClose ion-item (click)="openPage(d)" [class.isDirectLogin]="directNewStatus[i]" [class.isDirectNew]="d.new" class="btn" detail-none>
+        <div class="direct-point"></div>
+        {{d.title}}
+      </button>
+    </ion-list>
+    <p *ngIf="userType == 'facility' && directs.length == 0" class="no-notice">No facility members</p>
+    <ion-list no-lines>
+      <h4>Facility Settings</h4>
+      <button menuClose ion-item (click)="openPage(settings[5])" class="btn" detail-none>Feedback</button>
+      <button menuClose ion-item (click)="openPage(settings[0])" class="btn" detail-none>Settings</button>
+      <button menuClose ion-item (click)="openPage(settings[1])" class="btn" detail-none>Directory</button>
+      <button menuClose ion-item (click)="presentModal(settings[2])" *ngIf="userType == 'facility'" class="btn" detail-none>Invite Facility Workers</button>
+      <button menuClose ion-item (click)="presentModal(settings[3])" class="btn" detail-none>Invite Family Member</button>
+      <button menuClose ion-item (click)="presentModal(settings[4])" *ngIf="userType == 'facility'" class="btn" detail-none>Add a Patient</button>
+      <button menuClose ion-item (click)="signOut()" class="btn" detail-none>Log out</button>
+    </ion-list>    
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

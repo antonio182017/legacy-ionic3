@@ -1,0 +1,85 @@
+page-chat {
+  ion-label {
+    margin-top: 0 !important;
+  }
+  .message_top {
+    display: flex;
+  }
+  .avatar-div {
+    display: table;
+  }
+  .text-div {
+    padding-left:10px;
+    width: 100%;
+  }
+  .usr_n {
+    font-weight: bold;
+    font-size: 14px;
+    color: #252b3b;
+    font-family: "nameFont";
+    float: left;
+  }
+  .time_stamp {
+    color: #adb1bb;
+    font-size: 12px;
+    float: right;
+  }
+  .message-div {
+    float: left;
+    width: 100%;
+  }
+  p {
+    color: #51586a !important;
+    font-family: "bodyFont";
+    white-space: normal;
+  }
+  .option {
+    background: transparent;
+    opacity: 0;
+  }
+  .bar-button-menutoggle-md {
+    padding: 0;
+    margin: 0;
+  }
+  .scroll-content {
+    margin-bottom: 112px !important;
+  }
+  .btn-send {
+    float: right;
+    border-radius: 4px;
+    padding: 4px 14px;
+    margin: 0 20px;
+    font-size: 12px;
+  }
+  .readers {
+    font-size: 12px;
+    color: #9aa1b0;
+  }
+  .auto-list {
+    position: absolute;
+    width: calc(100% - 40px);
+    bottom: 0;
+    margin: 0;
+    border: solid 2px #cccccc !important;
+    border-radius: 5px;
+    ion-item {
+      padding: 0 15px !important;
+      ion-label {
+        margin: 0 !important;
+      }
+    }
+  }
+  ion-footer {
+    border-top: 1px solid #cccccc;
+    margin-bottom: 20px;
+    ion-input {
+      border: 0 !important;
+      padding: 0 !important;
+      input {
+        padding: 20px 20px !important;
+        margin: 0 !important;
+        border: 0 !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<!--
+  Generated template for the SettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24"><g transform="translate(0, 0)">
+        <line data-color="color-2" fill="none" stroke="#252b3b" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="1" y1="12" x2="23" y2="12" stroke-linejoin="round"></line>
+        <line fill="none" stroke="#252b3b" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="12" y1="5" x2="23" y2="5" stroke-linejoin="round"></line>
+        <line fill="none" stroke="#252b3b" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="1" y1="19" x2="12" y2="19" stroke-linejoin="round"></line>
+        </g></svg>
+    </button>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item-group>
+    <ion-item-divider color="light">About</ion-item-divider>
+    <ion-item>
+      <ion-input type="text" placeholder="First Name" [(ngModel)]="updateData.firstname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="Last Name" [(ngModel)]="updateData.lastname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="Job Title" [(ngModel)]="updateData.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="Enter New Password" [(ngModel)]="updateData.password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="Enter Confirm Password" [(ngModel)]="updateData.confirmpassword"></ion-input>
+    </ion-item>
+    <!-- <ion-item-divider color="light">Support</ion-item-divider>
+    <button ion-item (click)="sendFeedback()" class="btn" detail-none>Send us Feedback</button>
+    <button ion-item (click)="rateUs()" class="btn" detail-none>Rate Us!</button> -->
+    <ion-item-divider color="light">Logged in as {{facility}}</ion-item-divider>
+    <button ion-item (click)="signOut()" class="btn" detail-none>Log out</button>
+  </ion-item-group>
+  <button block ion-button (click)="update()" [disabled]="!updateData.firstname && !updateData.lastname && !updateData.title && !updateData.password && !updateData.confirmpassword || updateData.password !== updateData.confirmpassword" class="btn btn-blue btn-update">Update</button>  
+</ion-content>

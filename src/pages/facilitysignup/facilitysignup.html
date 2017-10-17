@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sign Up</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h6>First Step<span>1/2</span></h6>
+  <p>Enter your email and facility name.</p>
+  <ion-list no-lines>
+    <ion-item>
+      <ion-label stacked>Email / Phone Number</ion-label>
+      <ion-input type="text" [(ngModel)]="signupData.emailphone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Facility Name</ion-label>
+      <ion-input type="text" [(ngModel)]="signupData.facility" (focus)="showList = true" (keyup)="getFilteredFacilities($event)"></ion-input>
+    </ion-item>
+    <ion-list *ngIf="showList" class="facility-list" no-lines>
+      <ion-item *ngFor="let f of facilities" (click)="selectFacility(f.$value)">
+        {{ f.$value }}
+      </ion-item>
+    </ion-list>
+  </ion-list>
+  <button block ion-button (click)="signup()" [disabled]="!signupData.facility || !signupData.emailphone" class="btn btn-blue">Sign up</button>  
+</ion-content>

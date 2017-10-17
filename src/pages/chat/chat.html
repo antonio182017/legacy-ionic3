@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24"><g transform="translate(0, 0)">
+          <line data-color="color-2" fill="none" stroke="#252b3b" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="1" y1="12" x2="23" y2="12" stroke-linejoin="round"></line>
+          <line fill="none" stroke="#252b3b" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="12" y1="5" x2="23" y2="5" stroke-linejoin="round"></line>
+          <line fill="none" stroke="#252b3b" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="1" y1="19" x2="12" y2="19" stroke-linejoin="round"></line>
+          </g></svg>
+      </button>
+      <ion-title>{{title}}</ion-title>
+      <button class="option">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24"><g transform="translate(0, 0)">
+          <circle data-color="color-2" fill="none" stroke="#252b3b" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" cx="12" cy="12" r="2" stroke-linejoin="round"></circle>
+          <circle fill="none" stroke="#252b3b" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" cx="3" cy="12" r="2" stroke-linejoin="round"></circle>
+          <circle fill="none" stroke="#252b3b" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" cx="21" cy="12" r="2" stroke-linejoin="round"></circle>
+          </g></svg>
+      </button>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list no-lines>
+    <ion-item *ngFor="let message of messages; let i = index">
+      <div class="message_top">
+        <div class="avatar-div">
+          <!-- <img class="avatar" [src]="message.photoUrl" width="35" height="35"> -->
+          <div class="avatar" [style.backgroundColor]="colors[message.name.length % 4]">{{message.name.substring(0,1).toUpperCase()}}</div>
+        </div>
+        <div class="text-div">
+          <div class="usr_n">{{message.name}} <span *ngIf="message.title">/ {{message.title}}</span></div>
+          <span class="time_stamp">{{message.displayTime}}</span>
+          <div class="message-div">
+            <p>{{message.message}}</p>
+            <span *ngIf="message.name !== 'Legacy Bot'" (click)="showMessageModal(message.readUsers)" class="readers">Read by {{message.readUsers.length - 1}}</span>
+          </div>
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+  <ion-list no-lines *ngIf="showUserList" class="auto-list">
+    <ion-item *ngFor="let u of filteredUsers" (click)="setUser(u)">@{{u.firstName + u.lastName}}</ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-input type="text" placeholder="Enter message..." [(ngModel)]="newMessage" (keyup.enter)="send()" (ionChange)="checkName($event)"></ion-input>
+  <button ion-button item-right (click)="send()" class="btn-send">Send</button>
+</ion-footer>

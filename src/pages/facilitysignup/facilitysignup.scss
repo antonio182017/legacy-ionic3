@@ -1,0 +1,25 @@
+page-facilitysignup {
+  .toolbar-title-md {
+    margin-right: 30px;
+  }
+  h6 {
+    font-family: "headFont";
+    span {
+      font-size: 12px;
+      font-weight: normal;
+      float: right;
+      color: #aaaaaa;
+    }
+  }
+  p {
+    font-size: 12px;
+    color: #888888;
+    margin-bottom: 20px;
+  }
+  .facility-list {
+    ion-item {
+      border: solid 1px #eeeeee !important;
+      padding: 0 10px !important;
+    }
+  }
+}

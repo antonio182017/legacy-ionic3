@@ -1,0 +1,29 @@
+page-settings {
+  .toolbar-title-md {
+    margin-right: 30px;    
+  }
+  .scroll-content {
+    padding: 20px 0 0 !important;
+    ion-item, button {
+      padding-left: 20px !important;
+      border-bottom: 1px solid #e5e5e5;
+      font-weight: normal !important;
+    }
+    ion-item-divider {
+      padding-left: 20px !important;
+    }
+    ion-input {
+      input {
+        border: 0 !important;
+        padding: 0 !important;
+        font-size: 14px;
+      }
+    }
+    .btn-update {
+      margin: 20px !important;
+      font-weight: bold !important;
+      border-bottom: 0 !important;
+      width: calc(100% - 40px);
+    }
+  }
+}

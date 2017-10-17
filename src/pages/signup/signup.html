@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Signup</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <h6>Second Step<span>2/2</span></h6>
+  <p>Enter your name, phone number and password.</p>
+  <ion-list no-lines>
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="signupData.email" [disabled]="invitedEmail.length > 0"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Phone Number</ion-label>
+      <ion-input type="text" [(ngModel)]="signupData.phone" [disabled]="invitedPhone.length > 3"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Facility Name</ion-label>
+      <ion-input type="text" [(ngModel)]="signupData.facilityName" disabled></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>First Name</ion-label>
+      <ion-input type="text" [(ngModel)]="signupData.firstName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Last Name</ion-label>
+      <ion-input type="text" [(ngModel)]="signupData.lastName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="signupData.password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Re-enter Password</ion-label>
+      <ion-input type="password" [(ngModel)]="signupData.repassword"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button block ion-button class="btn btn-blue" (click)="signup()" [disabled]="(!signupData.email && !signupData.phone) || !signupData.password || !signupData.repassword || !signupData.firstName || !signupData.lastName || !signupData.facilityName">Signup</button>
+</ion-content>

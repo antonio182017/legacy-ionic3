@@ -1,0 +1,92 @@
+{
+    "name": "ionic-hello-world",
+    "version": "0.0.0",
+    "author": "Ionic Framework",
+    "homepage": "http://ionicframework.com/",
+    "private": true,
+    "scripts": {
+        "clean": "ionic-app-scripts clean",
+        "build": "ionic-app-scripts build",
+        "lint": "ionic-app-scripts lint",
+        "ionic:build": "ionic-app-scripts build",
+        "ionic:serve": "ionic-app-scripts serve"
+    },
+    "dependencies": {
+        "@angular/common": "4.1.3",
+        "@angular/compiler": "4.1.3",
+        "@angular/compiler-cli": "4.1.3",
+        "@angular/core": "4.1.3",
+        "@angular/forms": "4.1.3",
+        "@angular/http": "4.1.3",
+        "@angular/platform-browser": "4.1.3",
+        "@angular/platform-browser-dynamic": "4.1.3",
+        "@ionic-native/core": "3.12.1",
+        "@ionic-native/firebase": "^4.2.1",
+        "@ionic-native/firebase-analytics": "^4.2.1",
+        "@ionic-native/firebase-dynamic-links": "^4.2.1",
+        "@ionic-native/splash-screen": "3.12.1",
+        "@ionic-native/status-bar": "3.12.1",
+        "@ionic/storage": "2.0.1",
+        "angularfire2": "^4.0.0-rc.2",
+        "cordova-android": "^6.2.3",
+        "cordova-fabric-plugin": "^1.1.9",
+        "cordova-ios": "^4.4.0",
+        "cordova-plugin-cocoapod-support": "^1.3.0",
+        "cordova-plugin-device": "^1.1.4",
+        "cordova-plugin-splashscreen": "^4.0.3",
+        "cordova-plugin-statusbar": "^2.2.2",
+        "cordova-plugin-whitelist": "^1.3.1",
+        "core-js": "^2.5.1",
+        "firebase": "^4.3.0",
+        "firebase-functions": "^0.6.3",
+        "ionic-angular": "3.6.0",
+        "ionic-plugin-keyboard": "^2.2.1",
+        "ionicons": "3.0.0",
+        "promise-polyfill": "6.0.2",
+        "rxjs": "5.4.0",
+        "stacktrace-js": "^2.0.0",
+        "sw-toolbox": "3.6.0",
+        "truevault": "^0.5.0",
+        "truevaultjs": "^0.2.5",
+        "zone.js": "0.8.12"
+    },
+    "devDependencies": {
+        "@ionic/app-scripts": "^2.1.4-201709131805",
+        "@types/request": "^2.0.3",
+        "typescript": "2.3.4"
+    },
+    "cordovaPlugins": [
+        "cordova-plugin-whitelist",
+        "cordova-plugin-console",
+        "cordova-plugin-device",
+        "cordova-plugin-splashscreen",
+        "ionic-plugin-keyboard",
+        "cordova-plugin-statusbar"
+    ],
+    "cordovaPlatforms": [
+        "ios",
+        {
+            "platform": "ios",
+            "version": "",
+            "locator": "ios"
+        }
+    ],
+    "description": "chatapp: An Ionic project",
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-device": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-statusbar": {},
+            "cordova-plugin-whitelist": {},
+            "ionic-plugin-keyboard": {},
+            "cordova-fabric-plugin": {
+                "FABRIC_API_KEY": "0e5a9e67316f7df18e32c6b50a9db7b64b21542d",
+                "FABRIC_API_SECRET": "e9f618610fba09a7c2e6bb097d2f8df5ff325248d9fddfa567a8e8af44a9647c"
+            }
+        },
+        "platforms": [
+            "android",
+            "ios"
+        ]
+    }
+}

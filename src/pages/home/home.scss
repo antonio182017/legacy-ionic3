@@ -1,0 +1,30 @@
+page-home {
+  ion-content {
+    background: linear-gradient(135deg, #86d59b, #7fd8c6) !important;
+    img {
+      width: 50px;
+      margin-left: calc((100% - 50px) / 2);
+      margin-top: 40vh;
+    }
+  }
+  ion-footer {
+    padding: 20px;
+  }
+  button:last-child {
+    margin-top: 15px;
+    // box-shadow: 0px 2px 30px #d0d0d0;
+    // -webkit-box-shadow: 0px 2px 30px #d0d0d0;
+    color: #7fd8c6;
+  }
+  .btn-transparent {
+    box-shadow: none !important;
+    border: solid #eeeeee 1px;
+  }
+  h4 {
+    text-align: center;
+    color: #ffffff;
+    align-items: center;
+    font-family: "headFont";
+    margin-top: 40vh !important;
+  }
+}
